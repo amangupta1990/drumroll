@@ -14,3 +14,73 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+ /** COPY THIS */
+ @font-face {
+    font-family: 'KGAlwaysAGoodTime';
+    src: url('../assets/KGAlwaysAGoodTime.eot');
+    src: url('../assets/KGAlwaysAGoodTime.eot?#iefix') format('embedded-opentype'),
+         url('../assets/KGAlwaysAGoodTime.woff2') format('woff2'),
+         url('../assets/KGAlwaysAGoodTime.woff') format('woff'),
+         url('../assets/KGAlwaysAGoodTime.ttf') format('truetype'),
+         url('../assets/KGAlwaysAGoodTime.svg#Sri-TSCRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+   }
+
+
+   @font-face {
+    font-family: 'Dosis-Bold';
+
+    src: url('../assets/Dosis-Bold.ttf') format('truetype');
+  
+    font-weight: normal;
+    font-style: normal;
+   }
+
+    /** COPY THIS */
+   /*custom header */
+   ion-header {
+    background: white;
+    .custom-navbar{
+      
+       padding: 20px 0;
+      
+  
+       .back{
+        background: none;
+        color: #4a90e2;
+        font-family: 'KGAlwaysAGoodTime';
+        font-size: 40px;
+        font-size: 20.5px;
+        margin-top: 5px;
+      
+       }
+
+       h4.title{
+        -webkit-box-flex: 2;
+        -webkit-flex: 2;
+        -ms-flex: 2;
+        flex: 2;
+        color: #4a90e2;
+        font-family: 'KGAlwaysAGoodTime';
+        text-align: center;
+        font-size: 28px;
+        margin-left: -30px;
+       }
+
+       h6.subtitle{
+           text-align: center;
+           color:#9b9b9b;
+           font-size: 16px;
+           font-weight: normal;
+         
+       }
+   }
+
+}
+
+   .flex-row{
+       display: flex;
+       justify-content: flex-start;
+   }

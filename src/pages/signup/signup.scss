@@ -1,3 +1,72 @@
-page-home {
+signup-home {
+    ion-header{
+        .custom-navbar {
+        padding-top:33px;
+        h4.title{
+            font-size: 36px!important;
+        }
+
+        h6.subtitle{
+            font-size: 16px;
+            text-align: center;
+            color: #324654;
+            font-weight: bold;
+        }
+    }
+    }
+
+    .swiper-slide{
+        display: block;
+        
+    }
+
+    .message{
+        max-width: 230px;
+        object-fit: contain;
+        font-family: Roboto;
+        font-size: 16px;
+        text-align: center;
+        color: #9b9b9b;
+        margin:30px auto;
+    }
+
+    .input-container{
+        border-bottom: solid 3px #f6f6f6;
+        padding-bottom:16px;
+        max-width: 285px;
+        margin:auto;
+        span{
+        
+            font-size: 24px;
+            text-align: left;
+            color: black;
+            font-weight: bold;
+        }
+        input{
+            font-weight: bold;
+            font-size: 24px;
+            text-align: left;
+            color: #dcddde;
+            border:none;
+            max-width: 227px;
+        }
+    }
+
+    .continue{
+        max-width: 289px;
+        width: 100%;
+        margin: 0 7vw;
+        position: absolute;
+        bottom: 81px;
+        height: 50.8px;
+        border-radius: 8px;
+        background-color: #4a90e2;
+        border: solid 1px #206ec8;
+        display: block;
+        font-family: KGAlwaysAGoodTime;
+        font-size: 20px;
+        text-align: center;
+        color: #4070a7;
+    }
 
 }

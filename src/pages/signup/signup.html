@@ -1,15 +1,35 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
+
+  <div class="custom-navbar signup">
+    <div class="flex-row">
+      <div class="back" >&nbsp;</div>
+          <h4 class="title">Signup/ login</h4>
+         
+    </div>
+
+    <h6 class="subtitle">Step 1/2</h6>
+   
+  </div>
+
 </ion-header>
 
 <ion-content padding>
   <ion-slides #signupSlides>
+    <!-- step 1 -->
     <ion-slide>
-      <h1>Slide 1</h1>
+      <img src="assets/imgs/emoji-hi.png" class="hi" />
+      <p class="message">
+        Please enter your phone number
+        to Sign Up or Login
+      </p>
+
+    <div class="input-container">
+      <span class="country-code">+1</span>
+      <input placeholder="(XXX) - XXX - XXXX">
+    </div>
+
+    <button class="continue">continue</button>
+
     </ion-slide>
     <ion-slide>
       <h1>Slide 2</h1>
