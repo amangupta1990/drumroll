@@ -7,6 +7,9 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { SignupPage } from '../pages/signup/signup';
 
+/**directives */
+import { TextMaskModule } from 'angular2-text-mask';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -14,7 +17,8 @@ import { SignupPage } from '../pages/signup/signup';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    TextMaskModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
