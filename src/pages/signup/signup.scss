@@ -173,4 +173,19 @@ signup-home {
     }
 }
 
+.user-photo{
+    width: 104px;
+    height: 104px;
+    border-radius: 100px;
+    -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16);
+    border: solid 2px #ffffff;
+    border-radius: 100%;
+    display: block;
+    margin: auto;
+    overflow: hidden;
+    background-repeat: no-repeat!important;
+    background-size:cover!important;
+}
+
 }

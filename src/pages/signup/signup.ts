@@ -110,13 +110,13 @@ export class SignupPage {
   takePhoto(){
     debugger;
     let options:CameraOptions = {
-      quality:1,
+      quality:100,
       cameraDirection:1,
-      destinationType:0
+      destinationType:0,
     }
 
     this.camera.getPicture(options).then(img=>{
-      this.userPhoto = img;
+      this.userPhoto = 'data:image/gif;base64,'+img;
     })
   }
 }

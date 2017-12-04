@@ -59,7 +59,9 @@
 
       <div class="camera-container">
         <img src="assets/imgs/btn-add-photo.png" *ngIf="!userPhoto" (click)="takePhoto()" />
-        <img [src]="userPhoto" *ngIf="userPhoto"/>
+        <div class="user-photo" *ngIf="userPhoto" [ngStyle]="{background:'url('+userPhoto+')'}" (click)="takePhoto()">
+       
+          </div>
       </div>
 
       <div class="input-container">
