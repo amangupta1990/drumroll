@@ -45,10 +45,8 @@ export class SignupPage {
 
   ngAfterViewInit(){
 
-  //TODO: uuncomment after development;    
-
-   // this.slider.freeMode = false;
-    //this.slider.lockSwipes(true);
+    this.slider.freeMode = false;
+    this.slider.lockSwipes(true);
 
   
 
