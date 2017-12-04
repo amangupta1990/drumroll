@@ -7,7 +7,7 @@
          
     </div>
 
-    <h6 class="subtitle">Step 1/2</h6>
+    <h6 class="subtitle">Step {{currentPage}}/{{maxPages}}</h6>
    
   </div>
 
@@ -25,10 +25,10 @@
 
     <div class="input-container">
       <span class="country-code">+1</span>
-      <input placeholder="(XXX) - XXX - XXXX" [textMask]="{mask: mask,guide:false}">
+      <input placeholder="(XXX) - XXX - XXXX" [textMask]="{mask: mask,guide:false}" [(ngModel)]="userMobile">
     </div>
 
-    <button class="continue">continue</button>
+    <button class="continue" *ngIf="userMobile && userMobile.length == 17" (click)="getOtp()">continue</button>
 
     </ion-slide>
     <ion-slide>
