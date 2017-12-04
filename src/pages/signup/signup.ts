@@ -9,9 +9,17 @@ import { NavController, Slides } from 'ionic-angular';
 export class SignupPage {
 
   /** regex for phone number */
-  mask:any[] = ['(', /[1-9]/, /\d/, /\d/, ')', ' ',' ', /\d/, /\d/, /\d/, ' ','-',' ', /\d/, /\d/, /\d/, /\d/];
+  mobileMask:any[] = ['(', /[1-9]/, /\d/, /\d/, ')', ' ',' ', /\d/, /\d/, /\d/, ' ','-',' ', /\d/, /\d/, /\d/, /\d/];
   userMobile:any = null;
-  currentPage:number = 1;
+
+  /** regex for otp */
+  otpMask:any[] = [ /[1-9]/,' ',/[1-9]/,' ',/[1-9]/,' ',/[1-9]/,' ',/[1-9]/,' ',/[1-9]/];
+  userOTP:any = null;
+
+  userName:string= null;
+  userDesc:string = null;
+
+  currentPage:number = 1; // set to one af
   maxPages:number= 2; 
   private startSlide:number = 0;
   @ViewChild('signupSlides') slider:Slides;
@@ -20,8 +28,13 @@ export class SignupPage {
   }
 
   ngAfterViewInit(){
-    this.slider.freeMode = false;
-    this.slider.lockSwipes(true);
+
+  //TODO: uuncomment after development;    
+
+   // this.slider.freeMode = false;
+    //this.slider.lockSwipes(true);
+
+  
 
     
     
@@ -36,11 +49,35 @@ export class SignupPage {
 
   getOtp(){
     //TODO: get send te mobile otp and continue to next slide
+    this.userOTP = null;
     let phone = parseInt( this.userMobile.replace(/\D+/g, ''))
     this.slider.lockSwipes(false);
-    this.slider.slideNext(500);
+    this.slider.slideTo(1,500);
     this.slider.lockSwipes(true);
     this.currentPage = 2;
+  }
+
+  confirmOTP(){
+    let otp = parseInt( this.userOTP.replace(/\D+/g, ''))
+    this.slider.lockSwipes(false);
+    this.slider.slideTo(2,500);
+    this.slider.lockSwipes(true);
+    this.currentPage = 3;
+  }
+
+  goBack(){
+    this.slider.lockSwipes(false);
+    this.slider.slideTo(0,500);
+    this.slider.lockSwipes(true);
+    this.currentPage = 1;
+    this.userOTP = null;
+    this.userName = null;
+    this.userDesc = null;
+
+  }
+
+  saveProfile(){
+    //TODO: save the user profile
   }
 
 }

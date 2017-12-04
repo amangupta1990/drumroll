@@ -49,9 +49,35 @@ signup-home {
             color: black;
             border: none;
             max-width: 227px;
+            &.center-text{
+                text-align:center;
+            }
+            &.name{
+                max-width: 224px;
+                text-align: center;
+                font-family: KGAlwaysAGoodTime;
+                font-size: 18px;
+                text-align: left;
+                color: #dcddde;
+                padding-left: 30px;
+                margin-top:50px;
+                color:black;
+            }
+            &.work-desc{
+                max-width: 285px;
+                text-align: center;
+                font-family: KGAlwaysAGoodTime;
+                font-size: 18px;
+                text-align: left;
+                color: #dcddde;
+                width:100%;
+                margin-top:50px;
+                color:black;
+            }
         }
     }
 
+    ion-slide{
     .continue{
         max-width: 289px;
         width: 100%;
@@ -68,5 +94,25 @@ signup-home {
         text-align: center;
         color: #4070a7;
     }
+
+    .back{
+        max-width: 289px;
+        width: 100%;
+        margin: 0 7vw;
+        position: absolute;
+        bottom: 21px;
+        height: 50.8px;
+        border-radius: 8px;
+        display: block;
+        font-family: KGAlwaysAGoodTime;
+        font-size: 20px;
+        text-align: center;
+        color: #9b9b9b;
+        border-radius: 8px;
+        background-color: #f6f6f6;
+        border: solid 1px #979797;
+    }
+
+}
 
 }
