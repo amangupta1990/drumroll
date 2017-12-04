@@ -73,7 +73,7 @@
        </div>
     
 
-       <button class="continue" *ngIf="userDesc" (tap)="saveProfile()">continue</button>
+       <button class="continue" *ngIf="userDesc && userName && userPhoto" (tap)="saveProfile()">continue</button>
        <button class="back"  (tap)="goBack()">Back</button>
 
     </ion-slide>
