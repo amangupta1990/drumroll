@@ -10,6 +10,9 @@ import { SignupPage } from '../pages/signup/signup';
 /**directives */
 import { TextMaskModule } from 'angular2-text-mask';
 
+/**plugins */
+import {Camera} from "@ionic-native/camera"
+
 @NgModule({
   declarations: [
     MyApp,
@@ -28,7 +31,8 @@ import { TextMaskModule } from 'angular2-text-mask';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    Camera
   ]
 })
 export class AppModule {}

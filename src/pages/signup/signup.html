@@ -26,10 +26,10 @@
 
     <div class="input-container">
       <span class="country-code">+1</span>
-      <input placeholder="(XXX) - XXX - XXXX" [textMask]="{mask: mobileMask,guide:false}" [(ngModel)]="userMobile">
+      <input placeholder="(XXX)-XXX-XXXX" [textMask]="{mask: mobileMask,guide:false}" [(ngModel)]="userMobile">
     </div>
 
-    <button class="continue" *ngIf="userMobile && userMobile.length == mobileMask.length" (click)="getOtp()">continue</button>
+    <button class="continue" *ngIf="userMobile && userMobile.length == mobileMask.length" (tap)="getOtp()">continue</button>
 
     </ion-slide>
 
@@ -49,8 +49,8 @@
         <input class="center-text"  [(ngModel)]="userOTP" placeholder="X X X X X X" [textMask]="{mask: otpMask,guide:false}">
       </div>
   
-      <button class="continue" *ngIf="userOTP && userOTP.length == otpMask.length" (click)="confirmOTP()">continue</button>
-      <button class="back"  (click)="goBack()">Back</button>
+      <button class="continue" *ngIf="userOTP && userOTP.length == otpMask.length" (tap)="confirmOTP()">continue</button>
+      <button class="back"  (tap)="goBack()">Back</button>
   
     </ion-slide>
 
@@ -58,7 +58,8 @@
     <ion-slide>
 
       <div class="camera-container">
-        <img src="assets/imgs/btn-add-photo.png" />
+        <img src="assets/imgs/btn-add-photo.png" *ngIf="!userPhoto" (click)="takePhoto()" />
+        <img [src]="userPhoto" *ngIf="userPhoto"/>
       </div>
 
       <div class="input-container">
@@ -70,20 +71,21 @@
        </div>
     
 
-       <button class="continue" *ngIf="userDesc" (click)="saveProfile()">continue</button>
-       <button class="back"  (click)="goBack()">Back</button>
+       <button class="continue" *ngIf="userDesc" (tap)="saveProfile()">continue</button>
+       <button class="back"  (tap)="goBack()">Back</button>
 
     </ion-slide>
 
     <!-- step 4: do you work here ? -->
     <ion-slide class="scrollable">
-      <img src="assets/imgs/emoji-question.png"/>
+      <img src="assets/imgs/emoji-question.png" />
+      
       <p class="message">
           Pick your work place, if listed here.
       </p>
 
       <div class="card-list" *ngIf="businesses">
-        <div class="card" *ngFor="let business of businesses;let i = index;" (click)="selectWorkPlace(business)">
+        <div class="card" *ngFor="let business of businesses;let i = index;" (tap)="selectWorkPlace(business)">
           <img [src]="business.thumbnail">
           <div class="details">
             <p class="title">
@@ -98,10 +100,12 @@
 
       <!-- company selection list -->
 
-      <div class=""></div>
-      <button class="continue" *ngIf="userWorkplace" (click)="saveWorkplace()">continue</button>
-      <button class="back"  (click)="skipWorkplaceSelection()">Skip</button>
+     
 
     </ion-slide>
+    
   </ion-slides>
+  <!-- keeping the buttons outside so that they don't move ! -->
+  <button class="continue" *ngIf="userWorkplace && currentPage ==4" (tap)="saveWorkplace()">continue</button>
+  <button class="back" *ngIf="currentPage==4" (tap)="skipWorkplaceSelection()">Skip</button>
 </ion-content>

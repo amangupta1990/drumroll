@@ -52,7 +52,8 @@ signup-home {
             text-align: left;
             color: black;
             border: none;
-            max-width: 227px;
+            max-width: 230px;
+            width:100%;
             &.center-text{
                 text-align:center;
             }
@@ -81,7 +82,7 @@ signup-home {
         }
     }
 
-    ion-slide{
+    ion-content{
     .continue{
         max-width: 289px;
         width: 100%;
@@ -97,6 +98,7 @@ signup-home {
         font-size: 20px;
         text-align: center;
         color: #4070a7;
+        z-index:10;
     }
 
     .back{
@@ -115,6 +117,7 @@ signup-home {
         border-radius: 8px;
         background-color: #f6f6f6;
         border: solid 1px #979797;
+        z-index:10;
     }
 
 }

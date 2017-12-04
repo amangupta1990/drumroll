@@ -1,5 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { NavController, Slides } from 'ionic-angular';
+import {Camera,CameraOptions} from "@ionic-native/camera";
 
 
 @Component({
@@ -21,6 +22,7 @@ export class SignupPage {
 
   userName:string= null;
   userDesc:string = null;
+  userPhoto:any=null;
 
   currentPage:number = 1; // set to one af
   maxPages:number= 2; 
@@ -32,7 +34,7 @@ export class SignupPage {
  
 
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, private camera:Camera) {
     //TODO: fetch businesses in the background and keep them ready
 
     this.businesses = new Array(15).fill({
@@ -104,4 +106,17 @@ export class SignupPage {
   }
   saveWorkplace(){}
   skipWorkPlaceSelection(){}
+
+  takePhoto(){
+    debugger;
+    let options:CameraOptions = {
+      quality:1,
+      cameraDirection:1,
+      destinationType:0
+    }
+
+    this.camera.getPicture(options).then(img=>{
+      this.userPhoto = img;
+    })
+  }
 }
