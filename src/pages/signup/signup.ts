@@ -16,15 +16,31 @@ export class SignupPage {
   otpMask:any[] = [ /[1-9]/,' ',/[1-9]/,' ',/[1-9]/,' ',/[1-9]/,' ',/[1-9]/,' ',/[1-9]/];
   userOTP:any = null;
 
+  /** workplace models*/
+  userWorkplace:any;
+
   userName:string= null;
   userDesc:string = null;
 
   currentPage:number = 1; // set to one af
   maxPages:number= 2; 
-  private startSlide:number = 0;
+  
+  businesses:any[] = null;
   @ViewChild('signupSlides') slider:Slides;
+
+
+ 
+
+
   constructor(public navCtrl: NavController) {
-    
+    //TODO: fetch businesses in the background and keep them ready
+
+    this.businesses = new Array(15).fill({
+      title: 'Some business',
+      category : 'random',
+      thumbnail: 'http://via.placeholder.com/64x75',
+      selected:false
+    })
   }
 
   ngAfterViewInit(){
@@ -78,6 +94,16 @@ export class SignupPage {
 
   saveProfile(){
     //TODO: save the user profile
+    this.currentPage = 4;
+    this.slider.lockSwipes(false);
+    this.slider.slideTo(3,500);
+    this.slider.lockSwipes(true);
   }
 
+  selectWorkPlace(place){
+    //TODO:
+    this.userWorkplace = place;
+  }
+  saveWorkplace(){}
+  skipWorkPlaceSelection(){}
 }

@@ -3,11 +3,12 @@
   <div class="custom-navbar signup">
     <div class="flex-row">
       <div class="back" >&nbsp;</div>
-          <h4 class="title">Signup/ login</h4>
+          <h4 class="title" *ngIf="currentPage!=4">Signup/ login</h4>
+          <h4 class="title" *ngIf="currentPage==4">Do you work here?</h4>
          
     </div>
 
-    <h6 class="subtitle">Step {{currentPage}}/{{maxPages}}</h6>
+    <h6 class="subtitle" *ngIf="currentPage!=4">Step {{currentPage}}/{{maxPages}}</h6>
    
   </div>
 
@@ -71,6 +72,35 @@
 
        <button class="continue" *ngIf="userDesc" (click)="saveProfile()">continue</button>
        <button class="back"  (click)="goBack()">Back</button>
+
+    </ion-slide>
+
+    <!-- step 4: do you work here ? -->
+    <ion-slide class="scrollable">
+      <img src="assets/imgs/emoji-question.png"/>
+      <p class="message">
+          Pick your work place, if listed here.
+      </p>
+
+      <div class="card-list" *ngIf="businesses">
+        <div class="card" *ngFor="let business of businesses;let i = index;" (click)="selectWorkPlace(business)">
+          <img [src]="business.thumbnail">
+          <div class="details">
+            <p class="title">
+              {{business.title}}
+            </p>
+            <p class="sub-title">
+              {{business.category}}
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- company selection list -->
+
+      <div class=""></div>
+      <button class="continue" *ngIf="userWorkplace" (click)="saveWorkplace()">continue</button>
+      <button class="back"  (click)="skipWorkplaceSelection()">Skip</button>
 
     </ion-slide>
   </ion-slides>

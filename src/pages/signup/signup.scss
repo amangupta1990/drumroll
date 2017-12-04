@@ -20,6 +20,10 @@ signup-home {
         
     }
 
+    .scrollable{
+        overflow-y: auto;
+    }
+
     .message{
         max-width: 230px;
         object-fit: contain;
@@ -82,7 +86,7 @@ signup-home {
         max-width: 289px;
         width: 100%;
         margin: 0 7vw;
-        position: absolute;
+        position: fixed;
         bottom: 81px;
         height: 50.8px;
         border-radius: 8px;
@@ -99,7 +103,7 @@ signup-home {
         max-width: 289px;
         width: 100%;
         margin: 0 7vw;
-        position: absolute;
+        position: fixed;
         bottom: 21px;
         height: 50.8px;
         border-radius: 8px;
@@ -113,6 +117,57 @@ signup-home {
         border: solid 1px #979797;
     }
 
+}
+
+.card-list{
+    width:100%;
+    padding-bottom: 160px;
+    .card{
+        min-width: 329px;
+        max-width: 329px;
+        min-height: 81.9px;
+        max-height: 85.9px;
+        border-radius: 10px;
+        margin: auto;
+        background-color: #ffffff;
+        box-shadow: 0 2px 4px 0 rgba(31, 49, 74, 0.12);
+        padding:4px 8px;
+        margin-bottom: 10px;
+
+        
+        img{
+            float:left;
+            width: 74px;
+            height: 74.9px;
+            object-fit: contain;
+            background-color: #000000;
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.19);
+            border-radius: 100%;
+        }
+
+        .details{
+            padding-left:90px;
+        .title{
+   
+            font-family: KGAlwaysAGoodTime;
+            font-size: 20px;
+            text-align: left;
+            color: #5a7f8e;
+            margin:20px 0 0 0;
+        }
+
+        .sub-title{
+      
+            opacity: 0.4;
+            font-family: Roboto;
+            font-size: 14px;
+            text-align: left;
+            color: #1f314a;
+            margin-top:0;
+        }
+
+    }
+    }
 }
 
 }
