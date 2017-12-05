@@ -3,7 +3,7 @@
     <name>drumroll</name>
     <description>An awesome Ionic/Cordova app.</description>
     <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
-    <content original-src="index.html" src="http://192.168.0.100:8100" />
+    <content src="index.html" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
@@ -41,7 +41,7 @@
         <splash density="port-xxxhdpi" src="resources/android/splash/drawable-port-xxxhdpi-screen.png" />
     </platform>
     <platform name="ios">
-        <config-file target="*-Info.plist" parent="NSCameraUsageDescription">
+        <config-file parent="NSCameraUsageDescription" target="*-Info.plist">
             <string>To take your photo</string>
         </config-file>
         <allow-intent href="itms:*" />
