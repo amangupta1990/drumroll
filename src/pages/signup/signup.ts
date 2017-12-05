@@ -43,9 +43,15 @@ export class SignupPage {
       thumbnail: 'http://via.placeholder.com/64x75',
       selected:false
     })
+
+    
+
+
   }
 
   ngAfterViewInit(){
+
+
 
     this.slider.freeMode = false;
     this.slider.lockSwipes(true);

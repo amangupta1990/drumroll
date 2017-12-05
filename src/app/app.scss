@@ -84,3 +84,9 @@
        display: flex;
        justify-content: flex-start;
    }
+
+   /** common fixes for android / ios **/
+
+   .header-md::after{
+       background-image:none;
+   }

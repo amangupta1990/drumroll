@@ -86,25 +86,26 @@ signup-home {
     .continue{
         max-width: 289px;
         width: 100%;
-        margin: 0 7vw;
+        margin: auto;
         position: fixed;
         bottom: 81px;
         height: 50.8px;
         border-radius: 8px;
         background-color: #4a90e2;
         border: solid 1px #206ec8;
-        display: block;
         font-family: KGAlwaysAGoodTime;
         font-size: 20px;
         text-align: center;
         color: #4070a7;
-        z-index:10;
+        z-index: 10;
+        left: 0;
+        right: 0;
     }
 
     .back{
         max-width: 289px;
         width: 100%;
-        margin: 0 7vw;
+        margin: auto;
         position: fixed;
         bottom: 21px;
         height: 50.8px;
@@ -118,6 +119,8 @@ signup-home {
         background-color: #f6f6f6;
         border: solid 1px #979797;
         z-index:10;
+        left:0;
+        right:0;
     }
 
 }
