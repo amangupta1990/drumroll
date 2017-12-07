@@ -1,0 +1,44 @@
+<!--
+  Generated template for the LocationPickerPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <div class="custom-navbar">
+    <div class="flex-row">
+      <div class="back" >&nbsp;</div>
+          <h4 class="title" *ngIf="currentPage!=4">{{title}}</h4>         
+    </div>
+
+
+   
+  </div>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <div class="search-bar" [attr.placeholder]="searchBarText">
+        
+        <places-auto-complete [center]="center" (placeChanged)="placeChanged($event)" #searchBar ></places-auto-complete>
+      </div>
+
+  <ngui-map [center]="center" [fullscreenControl]="false" [disableDefaultUI]="true" #map>
+    <custom-marker [position]="center" #marker>
+      <div>
+        <img src="assets/imgs/map_marker.png" width="30px;" height="50px;" />
+        <b>{{center}}</b>
+       
+      </div>
+    </custom-marker>
+  </ngui-map>
+
+
+  <div class="button-container-fixed">
+      <button class="continue" *ngIf="canContinue" (tap)="confirm()">{{doneButtonText}}</button>
+      <button class="back"  (tap)="goBack()">{{backButtonText}}</button>
+  </div>
+</ion-content>

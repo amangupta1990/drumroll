@@ -1,0 +1,9 @@
+<!-- Generated template for the PlacesAutoCompleteComponent component -->
+<input [(ngModel)]="autocomplete.query" (input)="Input.next($event)" placeholder="Enter location name or address" #input/>
+<ul *ngIf="autocompleteItems && autocompleteItems.length">
+        <li *ngFor="let item of autocompleteItems" 
+            (click)="chooseItem(item)">
+            {{ item.description }}
+        </li>
+</ul>
+    

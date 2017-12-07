@@ -1,6 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { NavController, Slides } from 'ionic-angular';
 import {Camera,CameraOptions} from "@ionic-native/camera";
+import {LocationPickerPage} from "../location-picker/location-picker";
 
 
 @Component({
@@ -20,9 +21,14 @@ export class SignupPage {
   /** workplace models*/
   userWorkplace:any;
 
+  /** user profile models */
   userName:string= null;
   userDesc:string = null;
   userPhoto:any=null;
+
+
+  /** location models  */
+  userWorkPlaceLocation = null;
 
   currentPage:number = 1; // set to one af
   maxPages:number= 2; 
@@ -57,7 +63,9 @@ export class SignupPage {
     this.slider.lockSwipes(true);
 
   
+    //TODO: remove after done ;
 
+    this.saveWorkplace({});
     
     
   }
@@ -110,7 +118,28 @@ export class SignupPage {
     //TODO:
     this.userWorkplace = place;
   }
-  saveWorkplace(){}
+  saveWorkplace(workplace){
+
+    this.userWorkplace = workplace;
+
+    // get the current location of the user:
+
+    this.navCtrl.push(LocationPickerPage,{
+      title: "Which location?",
+      backButtonText: 'Skip',
+      doneButtonText: 'Done',
+      searchBarText: 'Enter business location',
+      callback:(loc)=>{
+        return new Promise((resolve,reject)=>{
+          if(loc)
+          this.userWorkPlaceLocation = location;
+          resolve();
+        })
+        
+      }
+    })
+
+  }
   skipWorkPlaceSelection(){}
 
   takePhoto(){

@@ -90,3 +90,11 @@
    .header-md::after{
        background-image:none;
    }
+
+   .button-container-fixed{
+       position: fixed;
+       bottom:0;
+       width:100vw;
+       background:white;
+       padding:10px 15px;
+   }
