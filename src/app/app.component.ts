@@ -26,7 +26,7 @@ export class MyApp {
       let style = document.createElement("style");
       style.id = "dynamicstyles";
       style.innerText = `
-        .back,.continue{display:none!important};
+        .back,.continue, .button-container-fixed{display:none!important};
       `;
 
      
