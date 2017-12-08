@@ -12,7 +12,7 @@ import { Component } from '@angular/core';
 })
 export class PostComponent {
 
-  text: string;
+  text: any = Date.now();
 
   constructor() {
     console.log('Hello PostComponent Component');

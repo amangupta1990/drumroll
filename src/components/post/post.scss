@@ -13,6 +13,7 @@ post {
             }
 
             .post-body{
+                max-width: 285px;
                 padding-left:11px;
                 h1{
                     font-family: KGAlwaysAGoodTime;
@@ -47,6 +48,24 @@ post {
                             color: black;
                         }
                     }
+                }
+
+                .time-ago{
+                    margin:5px 0 0 0;
+                    font-family: Roboto;
+                    font-size: 14px;
+                    letter-spacing: -0.2px;
+                    text-align: left;
+                    color: #9b9b9b;
+                }
+
+                .comment{
+                    margin:5px 0 0 0;
+                    font-family: Dosis;
+                    font-size: 16px;
+                    letter-spacing: -0.2px;
+                    text-align: left;
+                    color: #9b9b9b;
                 }
             }
     }
