@@ -6,7 +6,10 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { Keyboard } from '@ionic-native/keyboard';
 import { MyApp } from './app.component';
 import { SignupPage } from '../pages/signup/signup';
-import {HomePageModule} from '../pages/home/home.module';
+
+import {MePage} from '../pages/home/me/me';
+import {FriendsPage} from '../pages/home/friends/friends';
+import {HomePage} from '../pages/home/home';
 import {LocationPickerPage} from '../pages/location-picker/location-picker'
 import {NguiMapModule} from '@ngui/map';
 import {ComponentsModule} from '../components/components.module';
@@ -22,7 +25,10 @@ import {Geolocation} from "@ionic-native/geolocation";
   declarations: [
     MyApp,
     SignupPage,
-    LocationPickerPage
+    LocationPickerPage,
+    HomePage,
+    MePage,
+    FriendsPage
   ],
   imports: [
     BrowserModule,
@@ -30,13 +36,16 @@ import {Geolocation} from "@ionic-native/geolocation";
     TextMaskModule,
     NguiMapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js?v=3&key=AIzaSyD9o5nDS5Okm1FqSXocY0rhGAoBxeb8-8k&libraries=places'}),
     ComponentsModule,
-    HomePageModule
+    
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     SignupPage,
-    LocationPickerPage
+    LocationPickerPage,
+    HomePage,
+    MePage,
+    FriendsPage
   ],
   providers: [
     StatusBar,

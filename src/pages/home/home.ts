@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import {  NavController, NavParams, Tabs } from 'ionic-angular';
+import {MePage} from './me/me';
+import {FriendsPage} from './friends/friends'
 
 /**
  * Generated class for the HomePage page.
@@ -8,12 +10,18 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
  * Ionic pages and navigation.
  */
 
-@IonicPage()
+
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html',
 })
 export class HomePage {
+
+  @ViewChild('tabs') tabs:Tabs;
+
+  /** tab pages */
+  mePageRoot = MePage;
+  friendsPageRoot = FriendsPage;
 
  /**view vars*/
  activeTab = 0;
@@ -22,7 +30,10 @@ export class HomePage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad HomePage');
+    // set the me page as the default 
+    this.tabs.select(1);
   }
+
+
 
 }
