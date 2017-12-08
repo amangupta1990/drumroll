@@ -32,6 +32,11 @@ export class HomePage {
   ionViewDidLoad() {
     // set the me page as the default 
     this.tabs.select(1);
+  
+  }
+
+  setActiveTab(tab){
+    this.activeTab = tab.index;
   }
 
 

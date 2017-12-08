@@ -13,9 +13,10 @@ import { Component } from '@angular/core';
 export class TimelineComponent {
 
   text: string;
-  posts = new Array(5).fill(null).map(post=>{
+  posts = new Array(6).fill(null).map((post,i)=>{
     return {
-      created: Date.now()
+      created: Date.now(),
+      me: i <= 3 ? true : false
 
     }
   })

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 /**
  * Generated class for the PostComponent component.
@@ -12,11 +12,12 @@ import { Component } from '@angular/core';
 })
 export class PostComponent {
 
+  @Input('data') data:any;
   text: any = Date.now();
 
   constructor() {
     console.log('Hello PostComponent Component');
-   
+    
   }
 
 }

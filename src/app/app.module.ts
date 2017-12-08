@@ -37,9 +37,7 @@ import {Geolocation} from "@ionic-native/geolocation";
     IonicModule.forRoot(MyApp),
     TextMaskModule,
     NguiMapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js?v=3&key=AIzaSyD9o5nDS5Okm1FqSXocY0rhGAoBxeb8-8k&libraries=places'}),
-    ComponentsModule,
-    PipesModule
-    
+    ComponentsModule    
     
   ],
   bootstrap: [IonicApp],

@@ -21,7 +21,7 @@
 
 
 <ion-content >
-  <ion-tabs #tabs>
+  <ion-tabs #tabs (ionChange)="setActiveTab($event)">
     <ion-tab [root]="mePageRoot">tab 1</ion-tab>
     <ion-tab [root]="tab2Root">tab 2</ion-tab>
     <ion-tab [root]="friendsPageRoot">tab 3</ion-tab>
@@ -29,7 +29,7 @@
 </ion-content>
 
 <div class="tab-bar">
-  <div class="tab">
+  <div class="tab"  (click)="tabs.select(0)">
     <img src="/assets/imgs/btn-you-off.png" *ngIf="activeTab != 0 " />
     <img src="/assets/imgs/btn-you-on.png" *ngIf="activeTab == 0 "/>
   </div>
@@ -38,7 +38,7 @@
     <img src="/assets/imgs/btn-drum-roll.png"  />
   </div>
 
-  <div class="tab">
+  <div class="tab" (click)="tabs.select(2)">
     <img src="/assets/imgs/btn-friends-off.png" *ngIf="activeTab != 2 " />
     <img src="/assets/imgs/btn-friends-on.png" *ngIf="activeTab == 2 "/>
   </div>
