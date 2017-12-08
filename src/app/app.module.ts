@@ -6,6 +6,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { Keyboard } from '@ionic-native/keyboard';
 import { MyApp } from './app.component';
 import { SignupPage } from '../pages/signup/signup';
+import {HomePageModule} from '../pages/home/home.module';
 import {LocationPickerPage} from '../pages/location-picker/location-picker'
 import {NguiMapModule} from '@ngui/map';
 import {ComponentsModule} from '../components/components.module';
@@ -28,7 +29,8 @@ import {Geolocation} from "@ionic-native/geolocation";
     IonicModule.forRoot(MyApp),
     TextMaskModule,
     NguiMapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js?v=3&key=AIzaSyD9o5nDS5Okm1FqSXocY0rhGAoBxeb8-8k&libraries=places'}),
-    ComponentsModule
+    ComponentsModule,
+    HomePageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

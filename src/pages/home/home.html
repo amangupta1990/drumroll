@@ -1,0 +1,45 @@
+<!--
+  Generated template for the HomePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header class="home-nav">
+
+  <div class="profile-container">
+    <img src="https://placeholdit.co//i/44x44?" class="profile-image"/>
+    <img src="/assets/imgs/icn-profile-spark.png" class="spark"/>
+  </div>
+
+  <input class="search-bar" placeholder="search ..."/>
+
+
+
+
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-tabs>
+    <ion-tab [root]="tab1Root">tab 1</ion-tab>
+    <ion-tab [root]="tab2Root">tab 2</ion-tab>
+    <ion-tab [root]="tab3Root">tab 3</ion-tab>
+  </ion-tabs>
+</ion-content>
+
+<div class="tab-bar">
+  <div class="tab">
+    <img src="/assets/imgs/btn-you-off.png" *ngIf="activeTab != 0 " />
+    <img src="/assets/imgs/btn-you-on.png" *ngIf="activeTab == 0 "/>
+  </div>
+
+  <div class="tab hero">
+    <img src="/assets/imgs/btn-drum-roll.png"  />
+  </div>
+
+  <div class="tab">
+    <img src="/assets/imgs/btn-friends-off.png" *ngIf="activeTab != 2 " />
+    <img src="/assets/imgs/btn-friends-on.png" *ngIf="activeTab == 2 "/>
+  </div>
+</div>

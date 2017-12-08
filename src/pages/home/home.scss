@@ -1,0 +1,93 @@
+page-home {
+
+    /** hide the original tabbar **/
+    .tabbar{
+        display:none;
+    }
+
+    .tab-bar{
+        position: fixed;
+        bottom:0;
+        height:auto;
+        width:100%;
+        display: flex;
+        z-index:200;
+        justify-content: space-between;
+        padding:8px 45px 8px;;
+        border-top:1px solid #9b9b9b;
+
+
+        .tab{
+            float:left;
+            &:nth-child(1){
+                img {
+                    width:40px;
+                    height:40px;
+                }
+            }
+
+            &:nth-child(2){
+                padding: 30px 18px 0 18px;
+                border-top: 1px solid #9b9b9b;
+                background: white;
+                border-radius: 60px;
+                margin-top: -55px;
+                img {
+                    width:67px;
+                    height:71px;
+                }
+            }
+
+            &:nth-child(3){
+                margin-left:-10px;
+                img {
+                    width:71px;
+                    height:40px;
+                }
+            }
+        }
+
+    }
+
+    .home-nav{
+        display: flex;
+        height:86px;
+        padding:30px 20px 10px 10px;
+        justify-content: space-between;
+
+        .profile-container{
+            width: 62px;
+            max-width:  62px;
+            display: flex;
+
+        .profile-image{
+            width: 44px;
+            height: 44px;
+            object-fit: contain;
+            border-radius: 100px;
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.43);
+            border: solid 2px #ffffff;
+        }
+
+        .spark{
+            width: 20px;
+            height: 20px;
+            margin: -5px;
+        }
+     }
+
+
+     .search-bar{
+        width: 280px;
+        height: 42px;
+        border-radius: 25px;
+        background-color: #ffffff;
+        border: solid 1px #e6e5e5;
+        letter-spacing: 1.8px;
+        text-align: left;
+        color: #9b9b9b;
+        padding:12px 0 14px 10px;
+     }
+
+    }
+}
