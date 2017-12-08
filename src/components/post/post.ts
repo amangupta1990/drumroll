@@ -16,7 +16,7 @@ export class PostComponent {
 
   constructor() {
     console.log('Hello PostComponent Component');
-    this.text = 'Hello World';
+   
   }
 
 }

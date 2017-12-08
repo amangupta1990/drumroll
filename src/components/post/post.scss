@@ -1,3 +1,53 @@
 post {
+    .post-container{
+        display: flex;
+        margin-bottom: 81px;
+        margin-left:-42px;
+            .profile-image{
+                width: 44px;
+                height: 44px;
+                object-fit: contain;
+                border-radius: 100px;
+                box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.43);
+                border: solid 2px #ffffff;
+            }
 
+            .post-body{
+                padding-left:11px;
+                h1{
+                    font-family: KGAlwaysAGoodTime;
+                    font-size: 18px;
+                    letter-spacing: -0.2px;
+                    text-align: left;
+                    margin:5px 0 8px 0!important;
+                }
+
+                .action-bar{
+                    margin:0;
+                    font-family: Roboto;
+                    font-size: 14px;
+                    font-weight: 500;
+                    letter-spacing: -0.2px;
+                    text-align: left;
+                    color: #9b9b9b;
+                    font-weight: 400;
+
+                    .badge{
+                        margin:0 2px;
+                        img{
+                            margin: -4px 0;
+
+                        }
+
+                        span{
+                            font-family: Roboto;
+                            font-size: 14px;
+                            font-weight: 500;
+                            letter-spacing: -0.2px;
+                            color: black;
+                        }
+                    }
+                }
+            }
+    }
 }

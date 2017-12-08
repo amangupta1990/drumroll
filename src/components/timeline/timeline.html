@@ -1,4 +1,17 @@
 <!-- Generated template for the TimelineComponent component -->
-<div>
-  {{text}}
+
+  
+<div class="timeline-container">
+    <div *ngFor="let post  of posts; let i = index" >
+        
+            <h6 class="date-stamp" *ngIf="shouldAddStamp(post,i)">
+              <p>  {{ post.created |  amCalendar | stripTime}} </p> 
+            </h6>
+        
+            
+            <post></post>
+            
+        
+      </div>
+
 </div>

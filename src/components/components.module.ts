@@ -8,12 +8,17 @@ import { HeroBannerComponent } from './hero-banner/hero-banner';
 import { TimelineComponent } from './timeline/timeline';
 import { PostComponent } from './post/post';
 
+import {PipesModule} from '../pipes/pipes.module'
+/** ng 2 3rd party stuff */
+import { MomentModule } from 'angular2-moment';
+
+
 @NgModule({
 	declarations: [PlacesAutoCompleteComponent,
     HeroBannerComponent,
     TimelineComponent,
     PostComponent],
-	imports: [CommonModule,FormsModule, IonicModule],
+	imports: [CommonModule,FormsModule, IonicModule, MomentModule, PipesModule],
 	exports: [PlacesAutoCompleteComponent,
     HeroBannerComponent,
     TimelineComponent,

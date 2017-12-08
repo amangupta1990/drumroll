@@ -14,6 +14,8 @@ import {LocationPickerPage} from '../pages/location-picker/location-picker'
 import {NguiMapModule} from '@ngui/map';
 import {ComponentsModule} from '../components/components.module';
 
+/** custom pipes */
+import {PipesModule} from '../pipes/pipes.module'
 /**directives */
 import { TextMaskModule } from 'angular2-text-mask';
 
@@ -36,6 +38,8 @@ import {Geolocation} from "@ionic-native/geolocation";
     TextMaskModule,
     NguiMapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js?v=3&key=AIzaSyD9o5nDS5Okm1FqSXocY0rhGAoBxeb8-8k&libraries=places'}),
     ComponentsModule,
+    PipesModule
+    
     
   ],
   bootstrap: [IonicApp],

@@ -1,3 +1,33 @@
 timeline {
+    .timeline-container{
+        border-left: solid 1px #dbe0e4;
+        margin-left:30px;
+        padding-left:20px;
+        padding-top: 40px;
+        margin-top:-10vh;
 
+        .date-stamp{
+            background: url(/assets/imgs/lbl-time-stamp.png);
+            max-width: 86px;
+            background-repeat: no-repeat;
+            height: 32px;
+            overflow: hidden;
+            padding-left: 21px;
+            margin-left: -51px;
+            margin-top: -50px;
+            margin-bottom: 20px;
+            position: absolute;
+
+            p{
+                transform: rotate(-8deg);
+                font-family: Roboto;
+                font-size: 12px;
+                letter-spacing: -0.3px;
+                text-align: left;
+                width: 200px;
+                margin-top: -2px;
+                color:white;
+            }
+        }
+    }
 }
