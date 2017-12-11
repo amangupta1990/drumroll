@@ -13,12 +13,34 @@ import { NavController, NavParams } from 'ionic-angular';
   templateUrl: 'me.html',
 })
 export class MePage {
+  bannerConfig = {
+    left:{
+      title:"drumrolls",
+      value: 1
+    },
+    center:{
+      title:"balance",
+      value:50,
+    },
+    right:{
+      title:"categories",
+      value:1
+    }
+  }
+
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad MePage');
+    setTimeout(()=>{
+      
+       this.bannerConfig.center.value = 500; 
+       this.bannerConfig = Object.assign({},this.bannerConfig)
+    },1000)
   }
+
+ 
 
 }

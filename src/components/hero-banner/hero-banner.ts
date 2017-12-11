@@ -1,4 +1,4 @@
-import { Component, ViewChild, ElementRef } from '@angular/core';
+import { Component, ViewChild, ElementRef, Input, Output,  EventEmitter  } from '@angular/core';
 
 /**
  * Generated class for the HeroBannerComponent component.
@@ -12,11 +12,32 @@ import { Component, ViewChild, ElementRef } from '@angular/core';
 })
 export class HeroBannerComponent {
   @ViewChild('cashcontainer') cashcontainer:ElementRef;
-  text: string;
-  amount: string = "$50";
+
+  /** banner configs */
+  @Input('config') config:{
+    left:{
+       title:string;
+       value:string
+    },
+    center:{
+      title:string,
+      value:string,
+    },
+    right:{
+      title:string,
+      value:string
+    }
+  }  
+
+  /** banner events */
+  @Output('onLeftSideClicked') _leftSideClicked:EventEmitter<any> = new EventEmitter<any>(); 
+  @Output('onCenterClicked') _centerClicked:EventEmitter<any> = new EventEmitter<any>(); 
+  @Output('onRightSideClicked') _rightSideClicked:EventEmitter<any> = new EventEmitter<any>(); 
+
+
   constructor() {
     console.log('Hello HeroBannerComponent Component');
-    this.text = 'Hello World';
+    
 
     // to be run when values are updated
     
@@ -24,6 +45,16 @@ export class HeroBannerComponent {
 
   ngAfterViewInit(){
     this.fitText();
+  }
+
+  // track changes in input and perform a fit text
+  ngOnChanges(changes){
+    if(changes.config){
+      setTimeout(()=>{
+        this.fitText();
+      }, 0);
+      
+    }
   }
 
   fitText(){
@@ -41,6 +72,18 @@ export class HeroBannerComponent {
         this.cashcontainer.nativeElement.style.marginTop = '20px';
       }
     }
+  }
+
+  centerClicked(){
+    this._centerClicked.emit()
+  }
+  
+  leftSideClicked(){
+    this._leftSideClicked.emit();
+  }
+
+  rightSideclicked(){
+    this._rightSideClicked.emit();
   }
 
 }

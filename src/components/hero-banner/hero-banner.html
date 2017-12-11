@@ -2,19 +2,19 @@
 <div class="banner-container">
 
 
-<div class="left">
-  <h1>1</h1>
-  <p>drumrolls</p>
+<div class="left" (click)="leftSideClicked()">
+  <h1>{{config.left.value}}</h1>
+  <p>{{config.left.title}}</p>
 </div>
 
-<div class="center">
-    <h1  #cashcontainer>{{amount}}</h1>
-    <p>Balance</p>
+<div class="center" (click)="centerClicked()">
+    <h1  #cashcontainer>${{config.center.value}}</h1>
+    <p>{{config.center.title}}</p>
 </div>
 
-<div class="right">
-    <h1>1</h1>
-    <p>Categories</p>
+<div class="right" (click)="rightSideClicked()">
+    <h1>{{config.right.value}}</h1>
+    <p>{{config.right.title}}</p>
 </div>
   
 </div>

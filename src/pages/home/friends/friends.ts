@@ -13,7 +13,20 @@ import { NavController, NavParams } from 'ionic-angular';
   templateUrl: 'friends.html',
 })
 export class FriendsPage {
-
+  bannerConfig = {
+    left:{
+      title:"drumrolls",
+      value: 1
+    },
+    center:{
+      title:"balance",
+      value:50,
+    },
+    right:{
+      title:"categories",
+      value:1
+    }
+  }
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
