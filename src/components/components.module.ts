@@ -11,17 +11,20 @@ import { PostComponent } from './post/post';
 import {PipesModule} from '../pipes/pipes.module'
 /** ng 2 3rd party stuff */
 import { MomentModule } from 'angular2-moment';
+import { ProfileBannerComponent } from './profile-banner/profile-banner';
 
 
 @NgModule({
 	declarations: [PlacesAutoCompleteComponent,
     HeroBannerComponent,
     TimelineComponent,
-    PostComponent],
+    PostComponent,
+    ProfileBannerComponent],
 	imports: [CommonModule,FormsModule, IonicModule, MomentModule, PipesModule],
 	exports: [PlacesAutoCompleteComponent,
     HeroBannerComponent,
     TimelineComponent,
-    PostComponent]
+    PostComponent,
+    ProfileBannerComponent]
 })
 export class ComponentsModule {}

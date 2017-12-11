@@ -1,0 +1,74 @@
+page-friend-profile {
+    .location-container{
+        max-height: 208px;
+        margin-bottom: -128px;
+        z-index: 0;
+        display: block;
+        position: relative;
+        ngui-map{
+            max-height:208px;
+        }
+
+        img{
+            position: absolute;
+            width:100vw;
+            height:208px;
+            top:0;
+        }
+    }
+
+    profile-banner{
+        display: block;
+        z-index: 2;
+        position: relative;
+    }
+
+    .toolbar-background{
+        background:none!important;
+        border-bottom: 1px solid #dbe0e4;
+    }
+
+    .toolbar-content-ios {
+      
+        justify-content: space-around;
+        display: flex;
+        button{
+            background:none;
+        }
+    }
+
+    timeline{
+        overflow-y: scroll;
+        height: 41vh;
+        width: inherit;
+        display: block;
+        .timeline-container{
+            margin-top:0vh;
+        }
+
+         .timeline-container{ .date-stamp {
+            background: url(/assets/imgs/lbl-time-stamp.png);
+            max-width: 86px;
+            background-repeat: no-repeat;
+            height: 32px;
+            overflow: hidden;
+            padding-left: 21px;
+            margin-left: -51px;
+            margin-top: -10px;
+            margin-bottom: 31px;
+            position: relative;
+         }
+    }
+}
+
+    .menu-bar{
+        width: 100vw;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        z-index: 300;
+        padding:20px 11px;
+        margin-bottom: -85px;
+    }
+
+}

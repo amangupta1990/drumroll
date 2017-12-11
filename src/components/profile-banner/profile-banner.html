@@ -1,0 +1,34 @@
+<!-- Generated template for the HeroBannerComponent component -->
+<div class="banner-container">
+  
+  
+  <div class="left" (click)="leftSideClicked()">
+    <h1>{{config.left.value}}</h1>
+    <p>{{config.left.title}}</p>
+  </div>
+  
+  <div class="center" (click)="centerClicked()" #cashcontainer>
+    <img src="http://via.placeholder.com/100x100"/>
+  </div> 
+  
+  <div class="right" (click)="rightSideClicked()">
+      <h1>{{config.right.value}}</h1>
+      <p>{{config.right.title}}</p>
+  </div>
+    
+  </div>
+
+  <div class="profile-details">
+    <h1>{{config.center.displayName}}</h1>
+    <a href="">{{config.center.link}}</a>
+    <p>{{config.center.description}}</p>
+    <div class="meta">
+      <div>
+        <img src="/assets/imgs/icn-business.png"/><span>some location</span>
+      </div>
+      <div>
+          <img src="/assets/imgs/icn-location.png"/><span>some location</span>
+      </div>
+    </div>
+  </div>
+  

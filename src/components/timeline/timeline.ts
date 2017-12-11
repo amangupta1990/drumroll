@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+
+
 /**
  * Generated class for the TimelineComponent component.
  *
@@ -12,7 +14,7 @@ import { Component } from '@angular/core';
 })
 export class TimelineComponent {
 
-  text: string;
+  friendProfile = FriendProfilePage;
   posts = new Array(6).fill(null).map((post,i)=>{
     return {
       created: Date.now(),

@@ -11,6 +11,8 @@ import {MePage} from '../pages/home/me/me';
 import {FriendsPage} from '../pages/home/friends/friends';
 import {HomePage} from '../pages/home/home';
 import {LocationPickerPage} from '../pages/location-picker/location-picker'
+import {UserProfilePage} from '../pages/user-profile/user-profile';
+import {FriendProfilePage } from '../pages/friend-profile/friend-profile';
 import {NguiMapModule} from '@ngui/map';
 import {ComponentsModule} from '../components/components.module';
 
@@ -30,7 +32,9 @@ import {Geolocation} from "@ionic-native/geolocation";
     LocationPickerPage,
     HomePage,
     MePage,
-    FriendsPage
+    FriendsPage,
+    UserProfilePage,
+    FriendProfilePage
   ],
   imports: [
     BrowserModule,
@@ -47,7 +51,9 @@ import {Geolocation} from "@ionic-native/geolocation";
     LocationPickerPage,
     HomePage,
     MePage,
-    FriendsPage
+    FriendsPage,
+    UserProfilePage,
+    FriendProfilePage
   ],
   providers: [
     StatusBar,

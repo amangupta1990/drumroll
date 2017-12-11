@@ -1,7 +1,8 @@
 import { Component, ViewChild } from '@angular/core';
 import {  NavController, NavParams, Tabs } from 'ionic-angular';
 import {MePage} from './me/me';
-import {FriendsPage} from './friends/friends'
+import {FriendsPage} from './friends/friends';
+import {UserProfilePage} from '../user-profile/user-profile';
 
 /**
  * Generated class for the HomePage page.
@@ -22,6 +23,8 @@ export class HomePage {
   /** tab pages */
   mePageRoot = MePage;
   friendsPageRoot = FriendsPage;
+  userProfilePage = UserProfilePage;
+
 
  /**view vars*/
  activeTab = 0;

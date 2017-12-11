@@ -1,0 +1,87 @@
+@import '../hero-banner/hero-banner'; 
+
+profile-banner {
+    .banner-container{
+        background-color: transparent;
+    background-image: url('/assets/imgs/bg-banner-profile.png')!important;
+
+    .left h1, .right h1{
+        margin-top:1vh
+    }
+
+}
+
+.center{
+    img{
+        width: 100px;
+        height: 100px;
+        object-fit: contain;
+        border-radius: 100px;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16);
+        border: solid 2px #ffffff;
+        margin-top:-5px;
+    }
+}
+
+.profile-details{
+    max-width: 265px;
+    margin:auto auto;
+    display: block;
+    text-align: center;
+    margin-top:-120px;
+
+    h1{
+        font-family: KGAlwaysAGoodTime;
+        font-size: 20px;
+        letter-spacing: 1.5px;
+        text-align: center;
+        color:#4a90e2;
+        margin:0;
+        margin-bottom: 7px;
+        margin-top:10px;
+    }
+
+    a{
+        font-family: Roboto;
+        font-size: 14px;
+        font-weight: 300;
+        letter-spacing: -0.2px;
+        text-align: center;
+        color:#ff2757;
+        text-decoration: none;
+        margin:0;
+        margin-bottom: 7px;
+    }
+
+    p{
+        font-family: Roboto;
+        font-size: 14px;
+        font-weight: 300;
+        letter-spacing: -0.2px;
+        text-align: center;
+        color:#dbe0e4;
+        margin:0;
+        margin-bottom:7px;
+    }
+
+    .meta{
+        display: flex;
+        justify-content: center;
+        & >div{
+            display: flex;
+            justify-content:  center;
+            padding:0 5px;
+            font-family: Roboto;
+            font-size: 14px;
+            font-weight: 300;
+            letter-spacing: -0.2px;
+            text-align: center;
+            img{
+                margin-right:3px;
+            }
+        }
+    }
+}
+
+
+}
