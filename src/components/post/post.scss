@@ -4,22 +4,26 @@ post {
         margin-bottom: 81px;
         margin-left:-42px;
             .profile-image{
-                width: 44px;
-                height: 44px;
+                width: 36px;
+                height: 36px;
                 object-fit: contain;
                 border-radius: 100px;
                 box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.43);
                 border: solid 2px #ffffff;
             }
 
+            .with-action{
             .main-image{
-                width: 36px;
-                height: 36px;
+                width: 24px;
+                height: 24px;
+                margin-left: -20px;
+                margin-bottom: -10px;
                 object-fit: contain;
                 border-radius: 32px;
                 box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16);
                 border: solid 2px #ffffff;
             }
+        }
 
             .post-body{
                 max-width: 285px;
