@@ -74,8 +74,7 @@ export class LocationPickerPage {
 
 
   ngAfterViewInit() {
-    this.render.invokeElementMethod(this.searchBar.input.nativeElement, 'focus', []);
-    debugger;
+ 
     this.geo.getCurrentPosition().then((resp) => {
       // resp.coords.latitude
       // resp.coords.longitude
@@ -85,6 +84,7 @@ export class LocationPickerPage {
         console.log(JSON.stringify(result))
         
         this.center= result.locality+", "+result.countryName;
+        this.searchBar.input.nativeElement.value = this.center;
       }
       )
       .catch((error: any) => console.log(error));
