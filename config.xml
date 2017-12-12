@@ -3,7 +3,7 @@
     <name>drumroll</name>
     <description>An awesome Ionic/Cordova app.</description>
     <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
-    <content original-src="index.html" src="http://192.168.0.100:8100" />
+    <content src="index.html" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
@@ -89,7 +89,7 @@
     <plugin name="cordova-plugin-splashscreen" spec="^4.1.0" />
     <plugin name="cordova-plugin-ionic-webview" spec="^1.1.16" />
     <plugin name="cordova-plugin-camera" spec="^3.0.0" />
-      <edit-config file="*-Info.plist" mode="merge" target="NSLocationWhenInUseUsageDescription">
+    <edit-config file="*-Info.plist" mode="merge" target="NSLocationWhenInUseUsageDescription">
         <string>To get your location </string>
     </edit-config>
     <plugin name="cordova-plugin-geolocation" spec="^3.0.0">

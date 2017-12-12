@@ -3,6 +3,7 @@ import { NavController, NavParams, Platform } from 'ionic-angular';
 import { Geolocation,  Geoposition, } from '@ionic-native/geolocation';
 import { NguiMapComponent, CustomMarker } from '@ngui/map';
 import { PlacesAutoCompleteComponent } from '../../components/places-auto-complete/places-auto-complete';
+import { NativeGeocoder, NativeGeocoderReverseResult } from '@ionic-native/native-geocoder';
 /**
  * Generated class for the SendLocationPage page.
  *
@@ -36,7 +37,7 @@ export class LocationPickerPage {
   @ViewChild('map') map: NguiMapComponent;
   @ViewChild('marker') marker: CustomMarker
 
-  constructor(private platform: Platform, public navCtrl: NavController, public navParams: NavParams,  private changeDetector: ChangeDetectorRef, private render: Renderer, private geo:Geolocation) {
+  constructor(private platform: Platform, public navCtrl: NavController, public navParams: NavParams,  private changeDetector: ChangeDetectorRef, private render: Renderer, private geo:Geolocation, private revGeo:NativeGeocoder) {
 
     // register the callback 
     this.callback = navParams.data.callback;
@@ -48,22 +49,10 @@ export class LocationPickerPage {
     
 
 
-    platform.ready().then(()=> {
-      geo.getCurrentPosition().then((loc: Geoposition) => {
-        console.log("user location", loc)
-        this.center = {
-          lat: loc.coords.latitude,
-          lng: loc.coords.longitude
-        }
-      })
-      .catch(
-        err => {
-          this.err = err;
-        })
-    })
 
 
   }
+
 
 
   placeChanged(place) {
@@ -85,7 +74,23 @@ export class LocationPickerPage {
 
 
   ngAfterViewInit() {
-    this.render.invokeElementMethod(this.searchBar.input.nativeElement, 'focus', [])
+    this.render.invokeElementMethod(this.searchBar.input.nativeElement, 'focus', []);
+    debugger;
+    this.geo.getCurrentPosition().then((resp) => {
+      // resp.coords.latitude
+      // resp.coords.longitude
+      this.revGeo.reverseGeocode(resp.coords.latitude, resp.coords.longitude)
+      .then((result: NativeGeocoderReverseResult) => {
+        
+        console.log(JSON.stringify(result))
+        
+        this.center= result.locality+", "+result.countryName;
+      }
+      )
+      .catch((error: any) => console.log(error));
+     }).catch((error) => {
+       console.log('Error getting location', error);
+     });
   }
 
   confirm() {

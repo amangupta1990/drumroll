@@ -8,7 +8,7 @@
 
   <div class="profile-container" [navPush]="userProfilePage">
     <img src="https://placeholdit.co//i/44x44?" class="profile-image"/>
-    <img src="/assets/imgs/icn-profile-spark.png" class="spark"/>
+    <img src="assets/imgs/icn-profile-spark.png" class="spark"/>
   </div>
 
   <input class="search-bar" placeholder="search ..."/>
@@ -30,16 +30,16 @@
 
 <div class="tab-bar">
   <div class="tab"  (click)="tabs.select(0)">
-    <img src="/assets/imgs/btn-you-off.png" *ngIf="activeTab != 0 " />
-    <img src="/assets/imgs/btn-you-on.png" *ngIf="activeTab == 0 "/>
+    <img src="assets/imgs/btn-you-off.png" *ngIf="activeTab != 0 " />
+    <img src="assets/imgs/btn-you-on.png" *ngIf="activeTab == 0 "/>
   </div>
 
   <div class="tab hero">
-    <img src="/assets/imgs/btn-drum-roll-tab.png"  />
+    <img src="assets/imgs/btn-drum-roll-tab.png"  />
   </div>
 
   <div class="tab" (click)="tabs.select(2)">
-    <img src="/assets/imgs/btn-friends-off.png" *ngIf="activeTab != 2 " />
-    <img src="/assets/imgs/btn-friends-on.png" *ngIf="activeTab == 2 "/>
+    <img src="assets/imgs/btn-friends-off.png" *ngIf="activeTab != 2 " />
+    <img src="assets/imgs/btn-friends-on.png" *ngIf="activeTab == 2 "/>
   </div>
 </div>

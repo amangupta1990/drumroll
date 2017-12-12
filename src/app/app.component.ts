@@ -9,7 +9,7 @@ import {HomePage} from '../pages/home/home';
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = HomePage;
+  rootPage:any = SignupPage;
 
   constructor(private platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen , private ele: ElementRef, private kboard: Keyboard) {
     platform.ready().then(() => {

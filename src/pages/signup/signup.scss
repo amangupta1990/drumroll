@@ -123,6 +123,62 @@ signup-home {
         right:0;
     }
 
+    .button-container-fixed{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 4;
+        width: 100vw;
+        background: white;
+        padding: 10px 15px;
+        -webkit-box-shadow: 1px -5px 5px white;
+        box-shadow: 1px -5px 5px white;
+ 
+        .continue-fixed{
+            max-width: 330px;
+            width: 100%;
+            margin: auto;
+            position: relative;
+            height: 50.8px;
+            border-radius: 8px;
+            background-color: #4a90e2;
+            border: solid 1px #206ec8;
+            font-family: KGAlwaysAGoodTime;
+            font-size: 20px;
+            text-align: center;
+            color: #4070a7;
+            z-index: 10;
+            left: 0;
+            right: 0;
+            display: block;
+            margin-bottom: 10px;
+           
+        }
+    
+        .back-fixed{
+            max-width:330px;
+            width: 100%;
+            margin: auto;
+            position: relative;
+            height: 50.8px;
+            border-radius: 8px;
+            display: block;
+            font-family: KGAlwaysAGoodTime;
+            font-size: 20px;
+            text-align: center;
+            color: #9b9b9b;
+            border-radius: 8px;
+            background-color: #f6f6f6;
+            border: solid 1px #979797;
+            z-index:10;
+            left:0;
+            right:0;
+            display: block;
+        }
+        
+    }
+
+
 }
 
 .card-list{

@@ -108,6 +108,9 @@
     
   </ion-slides>
   <!-- keeping the buttons outside so that they don't move ! -->
-  <button class="continue" *ngIf="userWorkplace && currentPage ==4" (tap)="saveWorkplace()">continue</button>
-  <button class="back" *ngIf="currentPage==4" (tap)="skipWorkplaceSelection()">Skip</button>
+  <div class="button-container-fixed" *ngIf="currentPage==4">
+    <button class="continue-fixed" *ngIf="userWorkplace && currentPage ==4" (tap)="saveWorkplace()">continue</button>
+    <button class="back-fixed" *ngIf="currentPage==4" (tap)="skipWorkplaceSelection()">Skip</button>
+</div>
+
 </ion-content>

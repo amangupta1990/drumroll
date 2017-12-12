@@ -1,7 +1,8 @@
 import { Component, ViewChild } from '@angular/core';
-import { NavController, Slides } from 'ionic-angular';
+import { NavController, Slides, App } from 'ionic-angular';
 import {Camera,CameraOptions} from "@ionic-native/camera";
 import {LocationPickerPage} from "../location-picker/location-picker";
+import {HomePage} from '../home/home';
 
 
 @Component({
@@ -40,7 +41,7 @@ export class SignupPage {
  
 
 
-  constructor(public navCtrl: NavController, private camera:Camera) {
+  constructor(public navCtrl: NavController, private camera:Camera, private app: App) {
     //TODO: fetch businesses in the background and keep them ready
 
     this.businesses = new Array(15).fill({
@@ -65,7 +66,7 @@ export class SignupPage {
   
     //TODO: remove after done ;
 
-    this.saveWorkplace({});
+
     
     
   }
@@ -133,6 +134,7 @@ export class SignupPage {
         return new Promise((resolve,reject)=>{
           if(loc)
           this.userWorkPlaceLocation = location;
+           this.goToHome();
           resolve();
         })
         
@@ -140,7 +142,15 @@ export class SignupPage {
     })
 
   }
-  skipWorkPlaceSelection(){}
+  skipWorkPlaceSelection(){
+   this.goToHome();
+  }
+
+  goToHome(){
+    setTimeout(()=>{
+      this.navCtrl.push(HomePage);
+    },500)
+  }
 
   takePhoto(){
     debugger;
