@@ -4,8 +4,14 @@
 1. clone master
 2. run npm install
 
-## plugin:
-[https://ionicframework.com/docs/native/camera/
+## plugins:
+1. [https://ionicframework.com/docs/native/camera/]
+2. [https://ionicframework.com/docs/native/geolocation/]
+3. [https://ionicframework.com/docs/native/native-geocoder/]
 
 ### note for IOS:
-config xml has been added]
+configs in Xml has been added
+
+### reviewing :
+1. in the app.component set root page to signup to see the signup page
+2. set the home page as root to see the login page
