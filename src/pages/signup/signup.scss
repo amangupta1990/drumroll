@@ -87,8 +87,8 @@ signup-home {
         max-width: 289px;
         width: 100%;
         margin: auto;
-        position: fixed;
-        bottom: 81px;
+        position: relative;
+        margin-bottom:20px;
         height: 50.8px;
         border-radius: 8px;
         background-color: #4a90e2;
@@ -106,8 +106,8 @@ signup-home {
         max-width: 289px;
         width: 100%;
         margin: auto;
-        position: fixed;
-        bottom: 21px;
+        position: relative;
+        
         height: 50.8px;
         border-radius: 8px;
         display: block;

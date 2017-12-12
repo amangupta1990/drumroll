@@ -50,7 +50,7 @@
       </div>
   
       <button class="continue" *ngIf="userOTP && userOTP.length == otpMask.length" (tap)="confirmOTP()">continue</button>
-      <button class="back"  (tap)="goBack()">Back</button>
+      <button class="back" *ngIf="currentPage==2"  (tap)="goBack()">Back</button>
   
     </ion-slide>
 
