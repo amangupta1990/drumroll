@@ -24,6 +24,7 @@ import { TextMaskModule } from 'angular2-text-mask';
 /**plugins */
 import {Camera} from "@ionic-native/camera";
 import {Geolocation} from "@ionic-native/geolocation";
+import { NativeGeocoder } from '@ionic-native/native-geocoder';
 
 @NgModule({
   declarations: [
@@ -61,7 +62,8 @@ import {Geolocation} from "@ionic-native/geolocation";
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     Camera,
     Keyboard,
-    Geolocation
+    Geolocation,
+    NativeGeocoder
   ]
 })
 export class AppModule {}

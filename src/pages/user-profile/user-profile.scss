@@ -1,12 +1,15 @@
 page-user-profile {
     .location-container{
-        max-height: 208px;
-        margin-bottom: -128px;
+        max-height: 228px;
+        margin-bottom: -138px;
         z-index: 0;
         display: block;
         position: relative;
+        overflow-y: hidden;
         ngui-map{
-            max-height:208px;
+            max-height: 400px;
+            height:400px;
+            margin-top: -160px!important;
         }
 
         img{
@@ -15,7 +18,16 @@ page-user-profile {
             height:208px;
             top:0;
         }
+
+        custom-marker{
+            img{
+                width:20px;
+                height:40px;
+            }
+        }
     }
+
+ 
 
     profile-banner{
         display: block;
@@ -69,6 +81,16 @@ page-user-profile {
         z-index: 300;
         padding:20px 11px;
         margin-bottom: -85px;
+    }
+
+    custom-marker b{
+        color:#892c20;
+        font-size:13px;
+        font-weight: bold;
+        display: block;
+        position: absolute;
+        width: 50vw;
+
     }
 
 }

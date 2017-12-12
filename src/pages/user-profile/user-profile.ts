@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-
+import { NativeGeocoder, NativeGeocoderReverseResult, NativeGeocoderForwardResult } from '@ionic-native/native-geocoder';
+import { Geolocation } from '@ionic-native/geolocation';
 /**
  * Generated class for the UserProfilePage page.
  *
@@ -26,7 +27,7 @@ export class UserProfilePage {
       link: 'xyz',
       description: 'whassaaaaaaa',
       businessName: 'chic-fill-A',
-      location: {}
+      location: ""
 
     },
     right:{
@@ -35,11 +36,25 @@ export class UserProfilePage {
     }
   }
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private geo:Geolocation, private revGeo:NativeGeocoder) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad UserProfilePage');
+    this.geo.getCurrentPosition().then((resp) => {
+      // resp.coords.latitude
+      // resp.coords.longitude
+      this.revGeo.reverseGeocode(resp.coords.latitude, resp.coords.longitude)
+      .then((result: NativeGeocoderReverseResult) => {
+        
+        console.log(JSON.stringify(result))
+        
+        this.userProfileconfig.center.location = result.locality+", "+result.countryName;
+      }
+      )
+      .catch((error: any) => console.log(error));
+     }).catch((error) => {
+       console.log('Error getting location', error);
+     });
   }
 
 }

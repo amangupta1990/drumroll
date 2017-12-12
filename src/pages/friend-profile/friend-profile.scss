@@ -1,12 +1,16 @@
 page-friend-profile {
     .location-container{
-        max-height: 208px;
-        margin-bottom: -128px;
+        max-height: 228px;
+        margin-bottom: -138px;
         z-index: 0;
         display: block;
         position: relative;
+        overflow-y: hidden;
         ngui-map{
-            max-height:208px;
+            max-height: 400px;
+            height:400px;
+            margin-top: -160px!important;
+
         }
 
         img{
@@ -14,6 +18,13 @@ page-friend-profile {
             width:100vw;
             height:208px;
             top:0;
+        }
+
+        custom-marker{
+            img{
+                width:20px;
+                height:40px;
+            }
         }
     }
 

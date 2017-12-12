@@ -14,7 +14,15 @@
       </div>
 <div class="location-container">
  
-  <ngui-map center="new delhi" [fullscreenControl]="false" [disableDefaultUI]="true" ></ngui-map>
+    <ngui-map [center]="userProfileconfig.center.location" [fullscreenControl]="false" [disableDefaultUI]="true" >
+        <custom-marker [position]="userProfileconfig.center.location" #marker>
+          <div>
+            <img src="assets/imgs/map_marker.png" width="30px;" height="50px;" />
+            <b>{{userProfileconfig.center.location}}</b>
+           
+          </div>
+        </custom-marker>
+      </ngui-map>
   <img src="/assets/imgs/fg-map.png" />
 </div>
 <profile-banner [config]="userProfileconfig" ></profile-banner>

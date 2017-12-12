@@ -14,7 +14,7 @@ import { Component } from '@angular/core';
 })
 export class TimelineComponent {
 
-  friendProfile = FriendProfilePage;
+ 
   posts = new Array(6).fill(null).map((post,i)=>{
     return {
       created: Date.now(),
@@ -24,7 +24,7 @@ export class TimelineComponent {
   })
   constructor() {
     console.log('Hello TimelineComponent Component');
-    this.text = 'Hello World';
+    
   }
 
   
